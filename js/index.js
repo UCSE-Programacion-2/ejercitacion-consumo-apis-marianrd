@@ -18,6 +18,10 @@
 //    Estos elementos ya tienen estilos definidos en css/styles.css
 //    (.tarjeta img, .tarjeta h2, .tarjeta p).
 
+fetch('http://localhost:3000/api/user')
+  .then((response) => response.json())
+  .then((datos) => renderizarDatosUsuario(datos));
+
 function renderizarDatosUsuario(datos) {
   // Escribe aquí tu código para mostrar la foto, nombre completo e email en div.tarjeta
 }
