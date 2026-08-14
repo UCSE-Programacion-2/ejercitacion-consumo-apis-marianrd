@@ -18,8 +18,6 @@
 //    Estos elementos ya tienen estilos definidos en css/styles.css
 //    (.tarjeta img, .tarjeta h2, .tarjeta p).
 
-cargarUsuario();
-
 function renderizarDatosUsuario(datos) {
   const usuario = datos.results[0];
   const tarjeta = document.querySelector('.tarjeta');
@@ -42,3 +40,5 @@ function cargarUsuario() {
     .then((response) => response.json())
     .then((datos) => renderizarDatosUsuario(datos));
 }
+
+cargarUsuario();
